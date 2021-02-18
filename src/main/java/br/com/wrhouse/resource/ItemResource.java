@@ -11,6 +11,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Path("itens") @Log
@@ -29,6 +30,7 @@ public class ItemResource {
     @Transactional
     @Consumes(MediaType.APPLICATION_JSON)
     public Response save(Item item) {
+        item.setCreatedAt(LocalDateTime.now());
         itemRepository.persist(item);
         return Response.status(Status.CREATED).build();
     }

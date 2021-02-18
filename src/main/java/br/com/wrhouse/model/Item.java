@@ -31,7 +31,10 @@ public class Item {
     @Column(name = "details", length = 300)
     private String details;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
     @JoinColumn(name = "measurement_id")
     private Measurement measurement;
 
