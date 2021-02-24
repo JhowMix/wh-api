@@ -1,6 +1,5 @@
 package br.com.wrhouse.resource;
 
-import br.com.wrhouse.model.Measurement;
 import br.com.wrhouse.model.MeasurementUnit;
 import br.com.wrhouse.repository.MeasurementUnitRepository;
 

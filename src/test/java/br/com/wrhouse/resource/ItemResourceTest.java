@@ -26,7 +26,7 @@ public class ItemResourceTest {
         Item item = new Item();
         String itemJSON = "";
 
-        item.setDescription("Item 01");
+        item.setDetails("Item 01");
         item.setDetails("Item destinado a testes");
 
          try {
@@ -61,7 +61,7 @@ public class ItemResourceTest {
         Item item = itemRepository.find("id", 1l).firstResult();
         String itemJSON = "";
 
-        item.setDescription("Teste de Update 01");
+        item.setDetails("Teste de Update 01");
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             itemJSON = objectMapper.writeValueAsString(item);
